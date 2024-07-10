@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cambridge Dictionary</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: 0 auto; }
+        input[type="text"] { width: 100%; padding: 10px; margin: 20px 0; }
+        .results { margin-top: 20px; }
+        .pronunciations, .meanings { margin-top: 20px; }
+        .audio-container { margin-bottom: 10px; }
+        .definition-container { margin-bottom: 15px; }
+        .example { font-style: italic; color: gray; }
+        .synonyms, .antonyms, .see-also { font-style: italic; margin-top: 5px; }
+        img { max-width: 100%; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cambridge Dictionary</h1>
+        <input type="text" id="search" placeholder="Type a word...">
+        <div class="results" id="results"></div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>

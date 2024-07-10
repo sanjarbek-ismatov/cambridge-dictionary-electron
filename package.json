@@ -1,0 +1,34 @@
+{
+    "name": "cambridge-app",
+    "version": "1.0.0",
+    "description": "Cambridge Dictionary",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-packager . CambridgeDictionary --platform=win32 --arch=x64 --overwrite"
+    },
+    "build": {
+        "appId": "com.example.dict",
+        "productName": "Cambridge Dictionary",
+        "directories": {
+            "buildResources": "assets"
+        },
+        "files": [
+            "src/**/*"
+        ],
+        "win": {
+            "target": [
+                "nsis"
+            ]
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true
+        }
+    },
+    "devDependencies": {
+        "electron": "^31.1.0",
+        "electron-builder": "^24.13.3"
+    }
+}
